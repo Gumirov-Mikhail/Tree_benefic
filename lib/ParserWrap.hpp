@@ -182,7 +182,8 @@ void writeToFile(const std::string& path,
                     {std::to_string(company->GetInn())},
                     {company->GetFullName()}};
     for (const auto& fizik : natural) {
-      export_file += {{std::to_string(fizik->GetInn())},
+      export_file += {{},
+                      {std::to_string(fizik->GetInn())},
                       {fizik->GetFullName()},
                       {formatSharePercent(fizik->GetSharePercent().value())}};
     }
